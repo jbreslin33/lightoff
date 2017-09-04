@@ -3,10 +3,10 @@ const app = express()
 
 app.get('/', function (req, res) {
   res.send('Hello World!')
+	require('child_process').spawn('sh', ['off.sh'], {stdio: 'inherit'});
 })
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+app.listen(4000, function () {
+  console.log('Lightswitch off listening on port 4000!')
 })
 
-//require('child_process').spawn('sh', ['off.sh'], {stdio: 'inherit'});
